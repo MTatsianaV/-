@@ -14,8 +14,11 @@ Console.Write("k1:");
 int k1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("k2:");
 int k2 = Convert.ToInt32(Console.ReadLine());
+double x = PointOfIntersectionX(b1, b2, k1, k2);
+double y = PointOfIntersectionY(b1, k1, x);
 if (k1 == k2 && b1 == b2) Console.WriteLine("Прямые совпадают!");
-
+else if (k1 == k2) Console.WriteLine("Прямые параллельны!");
+else Console.WriteLine($"-> ({x};{y})");
 double PointOfIntersectionX(int xB1, int xB2, int xK1, int xK2)
 {
     return Convert.ToDouble(xB2 - xB1) / (xK1 - xK2);
@@ -24,6 +27,3 @@ double PointOfIntersectionY(int yB1, int yK1, double yX)
 {
     return Convert.ToDouble(yK1 * yX + yB1);
 }
-double x = PointOfIntersectionX(b1, b2, k1, k2);
-double y = PointOfIntersectionY(b1, k1, x);
-Console.WriteLine($"-> ({x};{y})");
