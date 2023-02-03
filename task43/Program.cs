@@ -14,6 +14,8 @@ Console.Write("k1:");
 int k1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("k2:");
 int k2 = Convert.ToInt32(Console.ReadLine());
+if (k1 == k2 && b1 == b2) Console.WriteLine("Прямые совпадают!");
+
 double PointOfIntersectionX(int xB1, int xB2, int xK1, int xK2)
 {
     return Convert.ToDouble(xB2 - xB1) / (xK1 - xK2);
