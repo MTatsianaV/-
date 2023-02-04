@@ -38,6 +38,7 @@ string FindArrayIJ(int[,] matrix, int row, int column)
     string res = string.Empty;
     if (row >= matrix.GetLength(0) || column >= matrix.GetLength(1))
         res = "Такого элемента в массиве нет!";
+    else if (row < 0 || column < 0) res = "Введены некорректные данные!";
     else res = $"{matrix[row, column]}";
     return res;
 }

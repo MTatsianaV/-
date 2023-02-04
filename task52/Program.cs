@@ -55,7 +55,7 @@ void PrintArrayDouble(double[] array)
         else Console.Write($"{array[i],5} ] ");
     }
 }
-int[,] array2D = CreateMatrixRndInt(3, 3, 0, 10);
+int[,] array2D = CreateMatrixRndInt(3, 3, -10, 10);
 double[] rithmeticMeanColumns = ArithmeticMeanColumns(array2D);
 PrintMatrix(array2D);
 Console.WriteLine("Среднее арифметическое каждого столбца: ");
